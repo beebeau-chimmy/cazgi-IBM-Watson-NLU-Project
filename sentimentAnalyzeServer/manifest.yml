@@ -1,7 +1,7 @@
 ---
 applications:
 - path: .
-  name: sentiment-analyzer #change to be unique in IBM Cloud
-  memory: 256M
+  name: lab-sentiment-analyzer-437 #change to be unique in IBM Cloud
+  memory: 60M 
   instances: 1
   random-route: true

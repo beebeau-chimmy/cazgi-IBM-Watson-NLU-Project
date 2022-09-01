@@ -7,17 +7,25 @@ class EmotionTable extends React.Component {
       return (  
         <div>
           <table className="table table-bordered">
-            <tbody>
-            {
-              /*Write code to use the .map method that you worked on in the 
-              Hands-on React lab to extract the emotions. If you are stuck,
-              please click the instructions to see how to implement a map*/
+            <tbody> {
+              /*
+                "For each entry of this JS object, print the key and value pair of the entry"
+                entry[0] is the entry's key.
+                entry[1] is the entry's value.
+              */
+              Object.entries(this.props.emotions).map( entry => {
+                return (
+                  <tr>
+                    <td>{entry[0]}</td>
+                    <td>{entry[1]}</td>
+                  </tr>
+                );
+              })
             }
             </tbody>
           </table>
-          </div>
-          );
-        }
-    
+        </div>
+      );
+    }
 }
 export default EmotionTable;

@@ -24,12 +24,12 @@ class App extends React.Component {
   */
  
   renderOutput = input_mode =>{
-    let rows = 1
-    let mode = "url"
+    let rows = 1;
+    let mode = 'url';
     //If the input mode is text make it 4 lines
     if(input_mode === "text"){
-      mode = "text"
-      rows = 4
+      mode = "text";
+      rows = 4;
     }
 
     this.setState( {
@@ -65,6 +65,7 @@ class App extends React.Component {
     if ( this.checkForValidText(textInput) ) {
       fetch(url).then( response => {
           response.json().then( data => {
+            console.log('Response result:', data);
             this.setState( {sentimentOutput: data.label} );
 
             let output = data.label;
